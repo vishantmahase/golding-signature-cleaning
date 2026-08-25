@@ -57,8 +57,7 @@ export default function AboutPage() {
               Golding Signature Cleaning proudly serves <strong>Palm Beach County and Central Florida</strong>,
               including <strong>St. Cloud, Sunbridge, Harmony, Kissimmee, Lake Nona, and surrounding
               Orlando communities.</strong>
-            </p>
-            </p>
+            </p>    
             <blockquote className="border-l-4 border-gold pl-4 italic text-navy">
               &ldquo;Our goal is to build lasting relationships with every client we
               serve&mdash;one spotless space at a time.&rdquo;
