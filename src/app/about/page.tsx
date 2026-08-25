@@ -43,19 +43,25 @@ export default function AboutPage() {
               Meet Our Founder
             </h2>
             <p className="mb-4 leading-relaxed text-gray-600">
-              The aim of Golding Signature Cleaning is to provide a trusted team
-              of dedicated and detail-oriented cleaners who deliver exceptional
-              service tailored to each client&apos;s unique needs.
+              Founder <strong>Petrice</strong> created <strong>Golding Signature Cleaning</strong> with a
+              commitment to providing dependable, detail-oriented cleaning with a personalized
+              touch. Her passion for service began while growing up in Jamaica, where she learned 
+              the importance of hard work, care, and taking pride in a job well done.
             </p>
             <p className="mb-4 leading-relaxed text-gray-600">
-              Founder Petrice developed her passion for service while growing up
-              in Jamaica. She now leads a small team in the United States
-              committed to helping clients&apos; homes shine across Palm Beach
-              County, Florida.
+              Today, Petrice leads a dedicated team focused on delivering a{" "}
+              <strong>high standard of professional cleaning</strong> and creating welcoming,
+              beautifully maintained spaces for every client.
+            </p>
+            <p className="mb-4 leading-relaxed text-gray-600">
+              Golding Signature Cleaning proudly serves <strong>Palm Beach County and Central Florida</strong>,
+              including <strong>St. Cloud, Sunbridge, Harmony, Kissimmee, Lake Nona, and surrounding
+              Orlando communities.</strong>
+            </p>
             </p>
             <blockquote className="border-l-4 border-gold pl-4 italic text-navy">
-              &ldquo;Our goal is to build lasting relationships with everyone we
-              serve, one spotless space at a time.&rdquo;
+              &ldquo;Our goal is to build lasting relationships with every client we
+              serve&mdash;one spotless space at a time.&rdquo;
             </blockquote>
 
             <div className="mt-8">
