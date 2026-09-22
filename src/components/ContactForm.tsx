@@ -13,7 +13,7 @@ export default function ContactForm() {
     const formData = new FormData(form);
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/peyton@tryastor.com", {
+      const res = await fetch("https://formsubmit.co/ajax/petrice@thegoldingagency.com", {
         method: "POST",
         headers: { Accept: "application/json" },
         body: formData,
@@ -64,7 +64,7 @@ export default function ContactForm() {
 
       <form onSubmit={handleSubmit} className="space-y-5">
         {/* FormSubmit.co config: CC recipients, disable captcha, set subject */}
-        <input type="hidden" name="_cc" value="petrice@thegoldingagency.com,petrice1891@gmail.com" />
+        <input type="hidden" name="_cc" value="petrice1891@gmail.com" />
         <input type="hidden" name="_subject" value="New Cleaning Estimate Request - Golding Signature Cleaning" />
         <input type="hidden" name="_template" value="table" />
         {/* Honeypot for spam prevention */}
