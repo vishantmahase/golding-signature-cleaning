@@ -164,8 +164,8 @@ export default function Home() {
             Experience a New Level of Clean
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-white/90 sm:text-xl">
-            Professional house cleaning services serving West Palm Beach, Boca
-            Raton, Delray Beach, and all of Palm Beach County, Florida.
+            Professional house cleaning services proudly serving St. Cloud,
+            Lake Nona, Kissimmee, Orlando, and surrounding Central Florida communities.
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
@@ -361,10 +361,12 @@ export default function Home() {
       <section className="bg-navy py-16">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-3 font-serif text-3xl font-bold text-white sm:text-4xl">
-            Proudly Serving All of Palm Beach County
+            Proudly Serving Central Florida
           </h2>
           <p className="mb-8 text-white/70">
-            Professional house cleaning services from Jupiter to Boca Raton and everywhere in between.
+            Our primary service areas include St. Cloud, Lake Nona,
+            Kissimmee, Orlando, Harmony, Sunbridge, and surrounding communities.
+            We also provide cleaning services in West Palm Beach and surrounding areas.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {serviceAreasList.map((area) => (
@@ -431,8 +433,8 @@ export default function Home() {
             Ready for a Spotless Home?
           </h2>
           <p className="mb-8 text-gray-600">
-            Get a free cleaning estimate for your Palm Beach County home. We
-            usually respond within 24 hours.
+            Get a free cleaning estimate for your home in Central Florida 
+            or West Palm Beach. We usually respond within 24 hours.
           </p>
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
