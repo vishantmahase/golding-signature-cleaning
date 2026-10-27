@@ -1,24 +1,11 @@
 import type { MetadataRoute } from "next";
 
 const cities = [
-  "st-cloud",
-  "lake-nona",
-  "kissimmee",
-  "orlando",
-  "harmony",
-  "sunbridge",
-  "west-palm-beach",
-  "boca-raton",
-  "delray-beach",
-  "boynton-beach",
-  "jupiter",
-  "wellington",
-  "palm-beach-gardens",
-  "lake-worth",
-  "royal-palm-beach",
-  "lantana",
-  "greenacres",
+  "st-cloud", "lake-nona", "kissimmee", "orlando", "harmony", "sunbridge",
+  "west-palm-beach", "boca-raton", "delray-beach", "boynton-beach", "jupiter",
+  "wellington", "palm-beach-gardens", "lake-worth", "royal-palm-beach", "lantana", "greenacres",
 ];
+const legacyServiceCities = cities.filter((city) => !["st-cloud", "lake-nona", "kissimmee", "orlando", "harmony", "sunbridge"].includes(city));
 
 const services = [
   "standard-cleaning",
@@ -38,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const serviceLocationPages: MetadataRoute.Sitemap = cities.flatMap((city) =>
+  const serviceLocationPages: MetadataRoute.Sitemap = legacyServiceCities.flatMap((city) =>
     services.map((service) => ({
       url: `${baseUrl}/service-areas/${city}/${service}`,
       lastModified: new Date(),
