@@ -97,7 +97,7 @@ export default function ContactForm() {
         {/* Address */}
         <div>
           <label htmlFor="address" className="mb-1 block text-sm font-medium text-gray-700">Address</label>
-          <input type="text" id="address" name="Address" placeholder="Street address in Palm Beach County" className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold" />
+          <input type="text" id="address" name="Address" placeholder="Street address and city in Florida" className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold" />
         </div>
 
         {/* Service Type + Property Type */}
