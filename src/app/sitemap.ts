@@ -1,6 +1,12 @@
 import type { MetadataRoute } from "next";
 
 const cities = [
+  "st-cloud",
+  "lake-nona",
+  "kissimmee",
+  "orlando",
+  "harmony",
+  "sunbridge",
   "west-palm-beach",
   "boca-raton",
   "delray-beach",
