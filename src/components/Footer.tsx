@@ -2,17 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const serviceAreas = [
+  { name: "St. Cloud", slug: "st-cloud" },
+  { name: "Lake Nona", slug: "lake-nona" },
+  { name: "Kissimmee", slug: "kissimmee" },
+  { name: "Orlando", slug: "orlando" },
+  { name: "Harmony", slug: "harmony" },
+  { name: "Sunbridge", slug: "sunbridge" },
   { name: "West Palm Beach", slug: "west-palm-beach" },
-  { name: "Boca Raton", slug: "boca-raton" },
-  { name: "Delray Beach", slug: "delray-beach" },
-  { name: "Boynton Beach", slug: "boynton-beach" },
-  { name: "Jupiter", slug: "jupiter" },
-  { name: "Wellington", slug: "wellington" },
-  { name: "Palm Beach Gardens", slug: "palm-beach-gardens" },
-  { name: "Lake Worth", slug: "lake-worth" },
-  { name: "Royal Palm Beach", slug: "royal-palm-beach" },
-  { name: "Lantana", slug: "lantana" },
-  { name: "Greenacres", slug: "greenacres" },
 ];
 
 export default function Footer() {
@@ -36,7 +32,7 @@ export default function Footer() {
               Professional cleaning company dedicated to providing reliable,
               detail-oriented, and customized cleaning services. Proudly serving
               residential, Airbnb, move-in/move-out, and office cleaning clients
-              across Palm Beach County, Florida.
+              across Central Florida and West Palm Beach.
             </p>
           </div>
 
@@ -92,7 +88,7 @@ export default function Footer() {
               <a href="mailto:info@thegoldingagency.com" className="transition-colors hover:text-gold">
                 info@thegoldingagency.com
               </a>
-              <p>West Palm Beach, FL 33401</p>
+              <p>Serving Central Florida &amp; West Palm Beach, FL</p>
               <div className="mt-2">
                 <p className="font-medium text-white/90">Business Hours</p>
                 <p>Mon – Sun: 6:00 AM – 10:00 PM</p>
@@ -123,7 +119,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/50">
-          <p>&copy; {new Date().getFullYear()} Golding Signature Cleaning. All rights reserved. Serving Palm Beach County, FL.</p>
+          <p>&copy; {new Date().getFullYear()} Golding Signature Cleaning. All rights reserved. Serving Central Florida &amp; West Palm Beach, FL.</p>
         </div>
       </div>
     </footer>
