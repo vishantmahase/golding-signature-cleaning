@@ -4,9 +4,9 @@ import Link from "next/link";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: "Residential Cleaning Services | Deep Clean, Airbnb & Move-Out | Palm Beach County",
+  title: "Residential Cleaning Services | Central Florida & West Palm Beach",
   description:
-    "Residential cleaning services in West Palm Beach and all of Palm Beach County, FL. Weekly, biweekly, and one-time deep cleaning for homes, Airbnbs, and move-outs. Book online today!",
+    "Residential cleaning services in St. Cloud, Lake Nona, Kissimmee, Orlando, and West Palm Beach, FL. Weekly, biweekly, and one-time deep cleaning for homes, Airbnbs, and move-outs. Book online today!",
   alternates: { canonical: "https://www.thegoldingagency.com/services" },
 };
 
@@ -17,7 +17,7 @@ const packages = [
     alt: "Standard residential house cleaning service in Palm Beach County FL",
     price: "Starting estimate provided after consultation",
     description:
-      "Ideal for routine upkeep and maintaining a clean, comfortable home. This service focuses on high-traffic and commonly used areas throughout your Palm Beach County residence.",
+      "Ideal for routine upkeep and maintaining a clean, comfortable home. This service focuses on high-traffic and commonly used areas throughout your Central Florida residence.",
     includes: [
       "Dusting surfaces",
       "Sweeping & mopping floors",
@@ -34,7 +34,7 @@ const packages = [
     alt: "Deep house cleaning service in West Palm Beach and Palm Beach County FL",
     price: "Starting estimate provided after consultation",
     description:
-      "A more detailed clean designed to tackle built-up dirt and neglected areas. Perfect for first-time clients or homes in Palm Beach County that need extra attention.",
+      "A more detailed clean designed to tackle built-up dirt and neglected areas. Perfect for first-time clients or homes in Central Florida that need extra attention.",
     includes: [
       "Everything in Standard Cleaning",
       "Detailed bathroom scrubbing",
@@ -50,7 +50,7 @@ const packages = [
     alt: "Airbnb turnover and move-out cleaning service in Palm Beach County FL",
     price: "Starting estimate provided after consultation",
     description:
-      "Designed for property turnovers, rentals, and move-outs across Palm Beach County. This service focuses on preparing the space for the next occupant or guest.",
+      "Designed for property turnovers, rentals, and move-outs across Central Florida and West Palm Beach. This service focuses on preparing the space for the next occupant or guest.",
     includes: [
       "Kitchen & bathroom deep clean",
       "Floors throughout",
@@ -66,7 +66,7 @@ const packages = [
     alt: "Professional office cleaning service in Palm Beach County FL",
     price: "Starting estimate provided after consultation",
     description:
-      "Keep your workspace clean, healthy, and professional. We provide reliable office cleaning for small and mid-size businesses throughout Palm Beach County.",
+      "Keep your workspace clean, healthy, and professional. We provide reliable office cleaning for small and mid-size businesses throughout Central Florida and West Palm Beach.",
     includes: [
       "Desk and workstation sanitization",
       "Breakroom and kitchen cleaning",
@@ -164,26 +164,13 @@ const servicesJsonLd = {
   ],
 };
 
-const serviceLocationLinks = [
-  { service: "Standard Cleaning", slug: "standard-cleaning" },
-  { service: "Deep Cleaning", slug: "deep-cleaning" },
-  { service: "Airbnb & Move-Out Cleaning", slug: "airbnb-cleaning" },
-  { service: "Office Cleaning", slug: "office-cleaning" },
-  { service: "Custom Focus Cleaning", slug: "custom-cleaning" },
-];
-
-const cities = [
-  { name: "West Palm Beach", slug: "west-palm-beach" },
-  { name: "Boca Raton", slug: "boca-raton" },
-  { name: "Delray Beach", slug: "delray-beach" },
-  { name: "Boynton Beach", slug: "boynton-beach" },
-  { name: "Jupiter", slug: "jupiter" },
-  { name: "Wellington", slug: "wellington" },
-  { name: "Palm Beach Gardens", slug: "palm-beach-gardens" },
-  { name: "Lake Worth Beach", slug: "lake-worth" },
-  { name: "Royal Palm Beach", slug: "royal-palm-beach" },
-  { name: "Lantana", slug: "lantana" },
-  { name: "Greenacres", slug: "greenacres" },
+const centralCities = [
+  { name: "St. Cloud", slug: "st-cloud" },
+  { name: "Lake Nona", slug: "lake-nona" },
+  { name: "Kissimmee", slug: "kissimmee" },
+  { name: "Orlando", slug: "orlando" },
+  { name: "Harmony", slug: "harmony" },
+  { name: "Sunbridge", slug: "sunbridge" },
 ];
 
 export default function ServicesPage() {
@@ -281,7 +268,7 @@ export default function ServicesPage() {
           <div className="relative h-80 overflow-hidden rounded-2xl md:h-[450px]">
             <Image
               src="/images/custom-cleaning.jpg"
-              alt="Custom focus hourly cleaning service for homes in Palm Beach County FL"
+              alt="Custom focus hourly cleaning service for homes in Central Florida FL"
               fill
               className="object-cover"
             />
@@ -322,29 +309,30 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Find Near You */}
+      {/* Service Areas */}
       <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-10 text-center font-serif text-3xl font-bold text-navy">
-            Find Our Services Near You
+          <h2 className="mb-4 text-center font-serif text-3xl font-bold text-navy">
+            Find Our Cleaning Services Near You
           </h2>
-          <div className="space-y-8">
-            {serviceLocationLinks.map((svc) => (
-              <div key={svc.slug}>
-                <h3 className="mb-3 text-lg font-bold text-navy">{svc.service}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {cities.map((city) => (
-                    <Link
-                      key={city.slug}
-                      href={`/service-areas/${city.slug}/${svc.slug}`}
-                      className="rounded-full border border-navy/20 bg-navy/5 px-4 py-2 text-sm font-medium text-navy transition-colors hover:bg-navy hover:text-white"
-                    >
-                      {city.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
+          <p className="mb-10 text-center text-gray-600">
+            Explore our primary Central Florida service areas or request a free cleaning estimate.
+          </p>
+          <h3 className="mb-4 text-xl font-bold text-navy">Central Florida — Primary Service Area</h3>
+          <div className="mb-10 flex flex-wrap gap-3">
+            {centralCities.map((city) => (
+              <Link key={city.slug} href={`/service-areas/${city.slug}`}
+                className="rounded-full border border-navy/20 bg-navy/5 px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-navy hover:text-white">
+                {city.name}
+              </Link>
             ))}
+          </div>
+          <div className="rounded-2xl bg-gray-50 p-8">
+            <h3 className="mb-3 text-xl font-bold text-navy">West Palm Beach — South Florida</h3>
+            <p className="mb-5 text-gray-600">We also offer cleaning services in West Palm Beach and surrounding Palm Beach County communities.</p>
+            <Link href="/service-areas/west-palm-beach" className="inline-block rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white hover:bg-navy-light">
+              Explore West Palm Beach Cleaning
+            </Link>
           </div>
         </div>
       </section>
@@ -357,7 +345,7 @@ export default function ServicesPage() {
           </h2>
           <p className="mb-8 text-white/70">
             Contact us and we&apos;ll help you choose the best cleaning package for your home.
-            We serve all of Palm Beach County, FL.
+            We primarily serve Central Florida, and also serve West Palm Beach.
           </p>
           <Link
             href="/contact"
