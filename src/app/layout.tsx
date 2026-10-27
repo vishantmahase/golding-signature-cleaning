@@ -20,13 +20,16 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.thegoldingagency.com"),
   title: {
     default:
-      "House Cleaning Services in Palm Beach County, FL | Golding Signature Cleaning",
+      "House Cleaning Services in Central Florida | Golding Signature Cleaning",
     template: "%s | Golding Signature Cleaning",
   },
   description:
-    "Professional house cleaning services in Palm Beach County, FL. Standard cleaning, deep cleaning, and move-in/move-out services for homes and Airbnbs. Book your free estimate today!",
+    "Professional house cleaning services in St. Cloud, Lake Nona, Kissimmee, Orlando, and West Palm Beach. Standard cleaning, deep cleaning, and move-in/move-out services for homes and Airbnbs. Book your free estimate today!",
   keywords: [
-    "house cleaning Palm Beach County",
+    "house cleaning St. Cloud FL",
+    "cleaning service Lake Nona",
+    "house cleaning Kissimmee",
+    "cleaning service Orlando",
     "cleaning service West Palm Beach",
     "maid service Palm Beach County",
     "deep cleaning West Palm Beach FL",
@@ -39,9 +42,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "House Cleaning Services in Palm Beach County, FL | Golding Signature Cleaning",
+      "House Cleaning Services in Central Florida | Golding Signature Cleaning",
     description:
-      "Professional house cleaning services serving West Palm Beach, Boca Raton, Delray Beach, and all of Palm Beach County. Book your free estimate today!",
+      "Professional house cleaning services in St. Cloud, Lake Nona, Kissimmee, Orlando, and West Palm Beach. Book your free estimate today!",
     url: "https://www.thegoldingagency.com",
     siteName: "Golding Signature Cleaning",
     locale: "en_US",
@@ -51,7 +54,7 @@ export const metadata: Metadata = {
         url: "/images/hero.png",
         width: 1200,
         height: 630,
-        alt: "Golding Signature Cleaning - Professional House Cleaning in Palm Beach County",
+        alt: "Golding Signature Cleaning - Professional House Cleaning in Central Florida",
       },
     ],
   },
@@ -87,6 +90,12 @@ const jsonLd = {
     addressCountry: "US",
   },
   areaServed: [
+    { "@type": "Place", name: "St. Cloud, FL" },
+    { "@type": "Place", name: "Lake Nona, Orlando, FL" },
+    { "@type": "Place", name: "Kissimmee, FL" },
+    { "@type": "Place", name: "Orlando, FL" },
+    { "@type": "Place", name: "Harmony, FL" },
+    { "@type": "Place", name: "Sunbridge, FL" },
     { "@type": "Place", name: "Palm Beach County, Florida" },
     { "@type": "Place", name: "West Palm Beach, FL" },
     { "@type": "Place", name: "Boca Raton, FL" },
@@ -116,7 +125,7 @@ const jsonLd = {
     "Office Cleaning",
   ],
   description:
-    "Professional residential cleaning services serving Palm Beach County, Florida.",
+    "Professional residential cleaning services primarily serving Central Florida, with additional service in West Palm Beach.",
 };
 
 export default function RootLayout({
