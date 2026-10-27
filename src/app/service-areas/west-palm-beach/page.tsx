@@ -66,7 +66,7 @@ export default function WestPalmBeachPage() {
             House Cleaning Services in West Palm Beach, FL
           </h1>
           <p className="text-lg text-white/80">
-            Our home base &mdash; proudly serving every neighborhood in West Palm
+            Our South Florida service area &mdash; proudly serving neighborhoods in West
             Beach with reliable, detail-driven residential cleaning.
           </p>
         </div>
@@ -77,8 +77,7 @@ export default function WestPalmBeachPage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none text-gray-600">
             <p>
-              West Palm Beach is where Golding Signature Cleaning started, and it
-              remains the heart of our operation. Because we live and work here, we
+              West Palm Beach remains an important service area for Golding Signature Cleaning. We
               understand the unique demands that South Florida living places on a
               home. Salt air off the Intracoastal, afternoon humidity, and fine sand
               that somehow finds its way indoors all contribute to faster
@@ -100,10 +99,7 @@ export default function WestPalmBeachPage() {
               layout.
             </p>
             <p>
-              Being headquartered in West Palm Beach means faster response times and
-              more flexible scheduling for local clients. Need a same-day deep clean
-              before guests arrive from the Palm Beach waterfront? We can often
-              accommodate that. Looking for consistent weekly service for your
+              For West Palm Beach clients, we can discuss scheduling options based on availability. Need a deep clean before guests arrive from the Palm Beach waterfront? Contact us for a quote. Looking for consistent weekly service for your
               Grandview Heights family home or your SoSo rental property? We build
               recurring schedules that keep your space immaculate without you having
               to think about it. Our familiarity with the area &mdash; from the
