@@ -71,22 +71,17 @@ const galleryImages = [
 ];
 
 const serviceAreasList = [
-  { name: "West Palm Beach", slug: "west-palm-beach" },
-  { name: "Boca Raton", slug: "boca-raton" },
-  { name: "Delray Beach", slug: "delray-beach" },
-  { name: "Boynton Beach", slug: "boynton-beach" },
-  { name: "Jupiter", slug: "jupiter" },
-  { name: "Wellington", slug: "wellington" },
-  { name: "Palm Beach Gardens", slug: "palm-beach-gardens" },
-  { name: "Lake Worth", slug: "lake-worth" },
-  { name: "Royal Palm Beach", slug: "royal-palm-beach" },
-  { name: "Lantana", slug: "lantana" },
-  { name: "Greenacres", slug: "greenacres" },
+  { name: "St. Cloud", slug: "st-cloud" },
+  { name: "Lake Nona", slug: "lake-nona" },
+  { name: "Kissimmee", slug: "kissimmee" },
+  { name: "Orlando", slug: "orlando" },
+  { name: "Harmony", slug: "harmony" },
+  { name: "Sunbridge", slug: "sunbridge" },
 ];
 
 const faqs = [
   {
-    question: "How much does house cleaning cost in Palm Beach County?",
+    question: "How much does house cleaning cost in Central Florida?",
     answer:
       "Pricing depends on the size of your home, the type of cleaning, and how often you'd like service. Contact us for a free, no-obligation estimate tailored to your needs.",
   },
@@ -113,7 +108,7 @@ const faqs = [
   {
     question: "What areas do you serve?",
     answer:
-      "We serve all of Palm Beach County, Florida, including West Palm Beach, Boca Raton, Delray Beach, Boynton Beach, Jupiter, Wellington, Palm Beach Gardens, Lake Worth, Royal Palm Beach, Lantana, and Greenacres.",
+      "Our primary service area includes St. Cloud, Lake Nona, Kissimmee, Orlando, Harmony, and Sunbridge. We also serve West Palm Beach and surrounding Palm Beach County communities.",
   },
   {
     question: "How do I book a cleaning?",
@@ -153,7 +148,7 @@ export default function Home() {
       <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden pt-20">
         <Image
           src="/images/hero.png"
-          alt="Professional house cleaning services in Palm Beach County Florida"
+          alt="Professional house cleaning services in Central Florida"
           fill
           className="object-cover"
           priority
@@ -221,7 +216,7 @@ export default function Home() {
             </h2>
             <p className="mx-auto max-w-2xl text-gray-600">
               From routine upkeep to deep cleans and move-out turnovers, we have
-              the right cleaning package for your Palm Beach County home.
+              the right cleaning package for your Central Florida home.
             </p>
           </div>
 
@@ -336,7 +331,7 @@ export default function Home() {
               >
                 Instagram
               </a>{" "}
-              for before &amp; after photos from homes across Palm Beach County.
+              for before &amp; after photos from homes in our service areas.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -379,6 +374,11 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <div className="mt-10 border-t border-white/20 pt-8">
+            <h3 className="mb-3 font-serif text-2xl font-bold text-white">Also Serving West Palm Beach</h3>
+            <p className="mb-4 text-white/70">Professional cleaning services in West Palm Beach and surrounding Palm Beach County communities.</p>
+            <Link href="/service-areas/west-palm-beach" className="inline-block rounded-full border border-gold px-6 py-2 text-sm font-semibold text-gold hover:bg-white/10">Explore West Palm Beach Services</Link>
+          </div>
           <Link
             href="/service-areas"
             className="mt-8 inline-block text-sm font-semibold text-gold underline transition-colors hover:text-gold-light"
@@ -396,7 +396,7 @@ export default function Home() {
               Frequently Asked Questions
             </h2>
             <p className="text-gray-600">
-              Common questions about our cleaning services in Palm Beach County.
+              Common questions about our cleaning services in Central Florida and West Palm Beach.
             </p>
           </div>
           <div className="space-y-4">
