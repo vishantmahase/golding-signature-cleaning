@@ -4,9 +4,9 @@ import ContactForm from "@/components/ContactForm";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: "Get a Free Cleaning Estimate | Palm Beach County, FL",
+  title: "Get a Free Cleaning Estimate | Central Florida & West Palm Beach",
   description:
-    "Request a free cleaning estimate in Palm Beach County, FL. Contact Golding Signature Cleaning for residential, Airbnb, and move-in/move-out cleaning services. We respond within 24 hours.",
+    "Request a free cleaning estimate in Central Florida and West Palm Beach. Contact Golding Signature Cleaning for residential, Airbnb, and move-in/move-out cleaning services. We respond within 24 hours.",
   alternates: { canonical: "https://www.thegoldingagency.com/contact" },
 };
 
@@ -53,7 +53,7 @@ export default function ContactPage() {
                 </a>
                 <div className="flex items-start gap-3">
                   <svg className="mt-0.5 h-5 w-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                  <span>West Palm Beach, FL 33401<br />Serving all of Palm Beach County</span>
+                  <span>Primarily serving St. Cloud, Lake Nona, Kissimmee &amp; Orlando<br />Also serving West Palm Beach, FL</span>
                 </div>
               </div>
             </div>
