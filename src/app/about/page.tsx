@@ -4,9 +4,9 @@ import Link from "next/link";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: "About Us | Trusted House Cleaners in West Palm Beach, FL",
+  title: "About Us | Trusted House Cleaners in Central Florida",
   description:
-    "Meet the team behind Golding Signature Cleaning — trusted, detail-oriented house cleaners proudly serving Palm Beach County, Florida. Quality, consistency, and customer satisfaction.",
+    "Meet the team behind Golding Signature Cleaning — trusted, detail-oriented house cleaners proudly serving Central Florida and West Palm Beach. Quality, consistency, and customer satisfaction.",
   alternates: { canonical: "https://www.thegoldingagency.com/about" },
 };
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
             The Story Behind Our Shine
           </h1>
           <p className="text-lg text-white/80">
-            Dedicated to delivering exceptional cleaning services across Palm Beach County, Florida.
+            Dedicated to delivering exceptional cleaning services across Central Florida and West Palm Beach.
           </p>
         </div>
       </section>
@@ -80,7 +80,7 @@ export default function AboutPage() {
       <section className="bg-gray-50 py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="mb-12 text-center font-serif text-3xl font-bold text-navy">
-            Why Palm Beach County Homeowners Choose Us
+            Why Homeowners Choose Us
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
             <div className="rounded-2xl bg-white p-8 shadow-sm">
@@ -91,8 +91,7 @@ export default function AboutPage() {
               </div>
               <h3 className="mb-2 text-lg font-bold text-navy">Reliable &amp; Consistent</h3>
               <p className="text-sm leading-relaxed text-gray-600">
-                We show up on time, every time. Our clients in West Palm Beach,
-                Boca Raton, and throughout Palm Beach County count on us for
+                We show up on time, every time. Our clients in Central Florida and West Palm Beach count on us for
                 dependable, high-quality cleaning.
               </p>
             </div>
@@ -153,7 +152,7 @@ export default function AboutPage() {
             Ready to Experience the Golding Difference?
           </h2>
           <p className="mb-8 text-gray-600">
-            Let our team take care of your Palm Beach County home. Get a free,
+            Let our team take care of your home in Central Florida or West Palm Beach. Get a free,
             no-obligation estimate today.
           </p>
           <Link
