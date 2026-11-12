@@ -33,6 +33,9 @@ export default function Header() {
           <Link href="/service-areas" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
             Service Areas
           </Link>
+          <Link href="/careers" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
+            Careers
+          </Link>
           <Link href="/contact" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
             Contact
           </Link>
@@ -91,6 +94,7 @@ export default function Header() {
             <Link href="/services" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">Services</Link>
             <Link href="/about" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">About</Link>
             <Link href="/service-areas" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">Service Areas</Link>
+            <Link href="/careers" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">Careers</Link>
             <Link href="/contact" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">Contact</Link>
             <a
               href="tel:15612466544"

@@ -426,6 +426,16 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-navy py-16 text-center">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <h2 className="mb-4 font-serif text-3xl font-bold text-white sm:text-4xl">We’re Hiring</h2>
+          <p className="mb-8 text-white/80">Join the Golding Signature Cleaning team.</p>
+          <Link href="/careers" className="inline-block rounded-full bg-gold px-8 py-3.5 font-semibold text-navy transition-colors hover:bg-gold-light">
+            Join Our Team
+          </Link>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="bg-gold/10 py-20">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
