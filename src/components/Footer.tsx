@@ -149,13 +149,24 @@ export default function Footer() {
             <h3 id="footer-payments" className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold">
               Payments Accepted
             </h3>
-            <ul role="list" className="flex flex-wrap gap-2">
-              {["Zelle", "Mastercard", "Visa", "American Express", "Discover", "Square"].map((method) => (
-                <li key={method} className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-navy">
-                  {method}
-                </li>
-              ))}
-            </ul>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+              <Image
+                src="/images/square-accepted-cards.png"
+                alt="Square, Visa, Mastercard, American Express, and Discover"
+                width={680}
+                height={487}
+                className="h-auto w-48 max-w-full [filter:drop-shadow(0_0_1px_white)_drop-shadow(0_0_1px_white)]"
+                unoptimized
+              />
+              <Image
+                src="/images/zelle.svg"
+                alt="Zelle"
+                width={760}
+                height={340}
+                className="h-auto w-20"
+                unoptimized
+              />
+            </div>
           </section>
         </div>
 
