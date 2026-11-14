@@ -26,7 +26,7 @@ export default function CareersPage() {
       </section>
       <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-20">
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-10">
-          <h2 className="mb-5 font-serif text-2xl font-bold text-navy sm:text-3xl">Apply to join our cleaning team</h2>
+          <h2 className="mb-5 text-xl font-bold text-navy">Apply to join our cleaning team</h2>
           {ready && siteKey ? <CareersForm siteKey={siteKey} /> : (
             <p className="text-gray-700">Online applications are currently unavailable. Please check back later.</p>
           )}
