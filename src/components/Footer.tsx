@@ -117,6 +117,48 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="mt-12 grid gap-8 border-t border-white/10 pt-8 md:grid-cols-2">
+          <section aria-labelledby="footer-chamber">
+            <h3 id="footer-chamber" className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold">
+              Chamber Memberships
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              <div className="flex h-32 w-32 items-center justify-center rounded-lg bg-white p-2">
+                <Image
+                  src="/images/st-cloud-chamber-member.png"
+                  alt="St. Cloud Chamber of Commerce proud member"
+                  width={500}
+                  height={500}
+                  className="h-full w-full object-contain"
+                  unoptimized
+                />
+              </div>
+              <div className="flex h-32 w-32 items-center justify-center rounded-lg bg-white p-2">
+                <Image
+                  src="/images/palm-beaches-chamber-gold-member.webp"
+                  alt="Chamber of Commerce of the Palm Beaches 2026 Gold Member"
+                  width={256}
+                  height={320}
+                  className="h-full w-full object-contain"
+                  unoptimized
+                />
+              </div>
+            </div>
+          </section>
+          <section aria-labelledby="footer-payments">
+            <h3 id="footer-payments" className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold">
+              Payments Accepted
+            </h3>
+            <ul role="list" className="flex flex-wrap gap-2">
+              {["Zelle", "Mastercard", "Visa", "American Express", "Discover", "Square"].map((method) => (
+                <li key={method} className="rounded-md bg-white px-3 py-2 text-sm font-semibold text-navy">
+                  {method}
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/50">
           <p>&copy; {new Date().getFullYear()} Golding Signature Cleaning. All rights reserved. Serving Central Florida &amp; West Palm Beach, FL.</p>
