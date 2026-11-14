@@ -2,117 +2,151 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const pathname = usePathname();
+  const [hiringDismissed, setHiringDismissed] = useState(false);
+  const showHiringBanner = !hiringDismissed && pathname !== "/careers" && !pathname.startsWith("/careers/");
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-navy shadow-lg">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        {/* Logo */}
-        <Link href="/" className="flex-shrink-0">
-          <Image
-            src="/images/logo.png"
-            alt="Golding Signature Cleaning logo - house cleaning Palm Beach County FL"
-            width={200}
-            height={133}
-            className="h-12 w-auto sm:h-14"
-            priority
-          />
-        </Link>
+    <>
+      {/* Reserve the banner height above pages that already offset the fixed navigation. */}
+      {showHiringBanner && <div className="h-11" aria-hidden="true" />}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-navy shadow-lg">
+        {showHiringBanner && (
+          <div className="border-b border-gold/30 bg-navy-light text-white">
+            <div className="relative mx-auto flex h-11 max-w-7xl items-center justify-center gap-3 px-11 sm:gap-5">
+              <p className="flex items-center gap-3 sm:gap-5">
+                <strong className="whitespace-nowrap font-serif text-base uppercase text-gold sm:text-xl">Now Hiring!</strong>
+                <span className="hidden border-l border-white/30 pl-5 text-sm sm:inline">Join our professional cleaning team</span>
+              </p>
+              <Link
+                href="/careers"
+                onClick={() => setMobileOpen(false)}
+                className="whitespace-nowrap rounded-full bg-gold px-3 py-1.5 text-xs font-bold text-navy hover:bg-gold-light"
+              >
+                Apply Now <span aria-hidden="true">›</span>
+              </Link>
+              <button
+                type="button"
+                aria-label="Dismiss hiring banner"
+                onClick={() => setHiringDismissed(true)}
+                className="absolute right-0 grid size-11 place-items-center text-xl hover:text-gold sm:right-2"
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+          </div>
+        )}
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+          {/* Logo */}
+          <Link href="/" className="flex-shrink-0">
+            <Image
+              src="/images/logo.png"
+              alt="Golding Signature Cleaning logo - house cleaning Palm Beach County FL"
+              width={200}
+              height={133}
+              className="h-12 w-auto sm:h-14"
+              priority
+            />
+          </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden items-center gap-6 md:flex" aria-label="Main navigation">
-          <Link href="/services" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
-            Services
-          </Link>
-          <Link href="/about" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
-            About
-          </Link>
-          <Link href="/service-areas" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
-            Service Areas
-          </Link>
-          <Link href="/careers" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
-            Careers
-          </Link>
-          <Link href="/contact" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
-            Contact
-          </Link>
-        </nav>
+          {/* Desktop Nav */}
+          <nav className="hidden items-center gap-6 md:flex" aria-label="Main navigation">
+            <Link href="/services" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
+              Services
+            </Link>
+            <Link href="/about" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
+              About
+            </Link>
+            <Link href="/service-areas" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
+              Service Areas
+            </Link>
+            <Link href="/careers" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
+              Careers
+            </Link>
+            <Link href="/contact" className="text-sm font-medium text-white/90 transition-colors hover:text-gold">
+              Contact
+            </Link>
+          </nav>
 
-        {/* Desktop CTA + Social */}
-        <div className="hidden items-center gap-4 md:flex">
-          <a
-            href="tel:15612466544"
-            className="text-sm font-medium text-white/90 transition-colors hover:text-gold"
-          >
-            (561) 246-6544
-          </a>
-          <a
-            href="https://www.facebook.com/profile.php?id=61574109267945"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit our Facebook page"
-            className="text-white/70 transition-colors hover:text-gold"
-          >
-            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
-          </a>
-          <a
-            href="https://www.instagram.com/goldingsignaturecleaning/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit our Instagram page"
-            className="text-white/70 transition-colors hover:text-gold"
-          >
-            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
-          </a>
-          <Link
-            href="/contact"
-            className="rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-navy transition-all hover:bg-gold-light hover:shadow-lg"
-          >
-            Get a Free Estimate
-          </Link>
-        </div>
-
-        {/* Mobile Hamburger */}
-        <button
-          className="flex flex-col gap-1.5 md:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle navigation menu"
-        >
-          <span className={`block h-0.5 w-6 bg-white transition-transform ${mobileOpen ? "translate-y-2 rotate-45" : ""}`} />
-          <span className={`block h-0.5 w-6 bg-white transition-opacity ${mobileOpen ? "opacity-0" : ""}`} />
-          <span className={`block h-0.5 w-6 bg-white transition-transform ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`} />
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {mobileOpen && (
-        <nav className="border-t border-white/10 bg-navy px-4 pb-6 pt-4 md:hidden" aria-label="Mobile navigation">
-          <div className="flex flex-col gap-4">
-            <Link href="/services" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">Services</Link>
-            <Link href="/about" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">About</Link>
-            <Link href="/service-areas" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">Service Areas</Link>
-            <Link href="/careers" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">Careers</Link>
-            <Link href="/contact" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">Contact</Link>
+          {/* Desktop CTA + Social */}
+          <div className="hidden items-center gap-4 md:flex">
             <a
               href="tel:15612466544"
-              onClick={() => setMobileOpen(false)}
-              className="mt-2 text-base font-medium text-white/90 hover:text-gold"
+              className="text-sm font-medium text-white/90 transition-colors hover:text-gold"
             >
               (561) 246-6544
             </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61574109267945"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
+              className="text-white/70 transition-colors hover:text-gold"
+            >
+              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+            </a>
+            <a
+              href="https://www.instagram.com/goldingsignaturecleaning/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Instagram page"
+              className="text-white/70 transition-colors hover:text-gold"
+            >
+              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
+            </a>
             <Link
               href="/contact"
-              onClick={() => setMobileOpen(false)}
-              className="mt-2 rounded-full bg-gold px-5 py-2.5 text-center text-sm font-semibold text-navy"
+              className="rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-navy transition-all hover:bg-gold-light hover:shadow-lg"
             >
               Get a Free Estimate
             </Link>
           </div>
-        </nav>
-      )}
-    </header>
+
+          {/* Mobile Hamburger */}
+          <button
+            className="flex flex-col gap-1.5 md:hidden"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            <span className={`block h-0.5 w-6 bg-white transition-transform ${mobileOpen ? "translate-y-2 rotate-45" : ""}`} />
+            <span className={`block h-0.5 w-6 bg-white transition-opacity ${mobileOpen ? "opacity-0" : ""}`} />
+            <span className={`block h-0.5 w-6 bg-white transition-transform ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileOpen && (
+          <nav className="border-t border-white/10 bg-navy px-4 pb-6 pt-4 md:hidden" aria-label="Mobile navigation">
+            <div className="flex flex-col gap-4">
+              <Link href="/services" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">Services</Link>
+              <Link href="/about" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">About</Link>
+              <Link href="/service-areas" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">Service Areas</Link>
+              <Link href="/careers" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">Careers</Link>
+              <Link href="/contact" onClick={() => setMobileOpen(false)} className="text-base font-medium text-white/90 hover:text-gold">Contact</Link>
+              <a
+                href="tel:15612466544"
+                onClick={() => setMobileOpen(false)}
+                className="mt-2 text-base font-medium text-white/90 hover:text-gold"
+              >
+                (561) 246-6544
+              </a>
+              <Link
+                href="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="mt-2 rounded-full bg-gold px-5 py-2.5 text-center text-sm font-semibold text-navy"
+              >
+                Get a Free Estimate
+              </Link>
+            </div>
+          </nav>
+        )}
+      </header>
+    </>
   );
 }
