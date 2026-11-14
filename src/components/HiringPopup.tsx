@@ -4,8 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const STORAGE_KEY = "golding-hiring-popup-last-shown";
-const DAY_MS = 24 * 60 * 60 * 1000;
 const DISPLAY_MS = 5000;
 
 export default function HiringPopup() {
@@ -13,30 +11,15 @@ export default function HiringPopup() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (pathname === "/careers" || pathname.startsWith("/careers/")) {
+    const initialPathname = window.location.pathname;
+    if (initialPathname === "/careers" || initialPathname.startsWith("/careers/")) {
       return;
     }
 
-    let eligible = true;
-    try {
-      const lastShown = Number(window.localStorage.getItem(STORAGE_KEY));
-      eligible = !lastShown || Date.now() - lastShown >= DAY_MS || Date.now() < lastShown;
-    } catch {
-      // Private browsing or blocked storage: the popup can still be dismissed.
-    }
-
-    if (!eligible) return;
-
     setVisible(true);
-    try {
-      window.localStorage.setItem(STORAGE_KEY, String(Date.now()));
-    } catch {
-      // Storage may be unavailable.
-    }
-
     const timeout = window.setTimeout(() => setVisible(false), DISPLAY_MS);
     return () => window.clearTimeout(timeout);
-  }, [pathname]);
+  }, []);
 
   if (!visible || pathname === "/careers" || pathname.startsWith("/careers/")) return null;
 
