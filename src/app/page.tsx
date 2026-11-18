@@ -185,6 +185,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Hiring Banner */}
+      <section aria-labelledby="hiring-title" className="relative z-10 bg-[#faf7f1] px-4 pb-10 pt-8 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl md:grid-cols-[34%_66%]">
+          <div className="relative min-h-56 overflow-hidden bg-navy md:min-h-[410px]">
+            <Image src="/images/moveout-cleaning.png" alt="Professional cleaning supplies and a freshly cleaned home" fill className="object-cover" sizes="(max-width: 768px) 100vw, 34vw" />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy via-navy/65 to-transparent p-7 pt-20 text-center">
+              <Image src="/images/logo.png" alt="Golding Signature Cleaning" width={110} height={90} className="mx-auto h-auto w-24 drop-shadow-lg" />
+            </div>
+            <div className="absolute inset-y-0 right-0 hidden w-3 bg-gold md:block" />
+          </div>
+          <div className="flex flex-col items-center justify-center px-5 py-8 text-center sm:px-10 sm:py-12">
+            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-gold px-6 py-2 text-sm font-extrabold uppercase tracking-wider text-navy sm:text-lg">
+              <span aria-hidden="true">📣</span> Now Hiring
+            </span>
+            <h2 id="hiring-title" className="font-serif text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-5xl">
+              Join Our Cleaning Team!
+            </h2>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-navy/80 sm:text-base">
+              We&apos;re looking for reliable, detail-oriented and motivated individuals to join our growing team in Central Florida.
+            </p>
+            <div className="my-8 grid w-full grid-cols-3 gap-2 text-center sm:gap-5">
+              <div className="flex flex-col items-center gap-2 border-r border-navy/20 px-1">
+                <span aria-hidden="true" className="text-2xl sm:text-3xl">🤝</span>
+                <span className="text-xs font-bold leading-snug text-navy sm:text-sm">Supportive Team Environment</span>
+              </div>
+              <div className="flex flex-col items-center gap-2 border-r border-navy/20 px-1">
+                <span aria-hidden="true" className="text-2xl sm:text-3xl">📅</span>
+                <span className="text-xs font-bold leading-snug text-navy sm:text-sm">Flexible Scheduling</span>
+              </div>
+              <div className="flex flex-col items-center gap-2 px-1">
+                <span aria-hidden="true" className="text-2xl sm:text-3xl">🌱</span>
+                <span className="text-xs font-bold leading-snug text-navy sm:text-sm">Growth Opportunities</span>
+              </div>
+            </div>
+            <Link href="/careers" className="inline-flex min-w-48 items-center justify-center gap-3 rounded-full bg-gold px-10 py-3.5 text-base font-bold text-navy shadow-sm transition-colors hover:bg-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy">
+              Apply Now <span aria-hidden="true">›</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Bar */}
       <section className="bg-gray-50 py-6">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-6 px-4 text-center text-sm font-medium text-gray-600 sm:gap-10">
@@ -423,16 +464,6 @@ export default function Home() {
               </details>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="bg-navy py-16 text-center">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h2 className="mb-4 font-serif text-3xl font-bold text-white sm:text-4xl">We’re Hiring</h2>
-          <p className="mb-8 text-white/80">Join the Golding Signature Cleaning team.</p>
-          <Link href="/careers" className="inline-block rounded-full bg-gold px-8 py-3.5 font-semibold text-navy transition-colors hover:bg-gold-light">
-            Join Our Team
-          </Link>
         </div>
       </section>
 
