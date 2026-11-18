@@ -1,21 +1,17 @@
 import WelcomeOfferPopup from "@/components/WelcomeOfferPopup";
 import type { Metadata } from "next";
-import { Poppins, Playfair_Display } from "next/font/google";
+import "@fontsource/poppins/latin-300.css";
+import "@fontsource/poppins/latin-400.css";
+import "@fontsource/poppins/latin-500.css";
+import "@fontsource/poppins/latin-600.css";
+import "@fontsource/poppins/latin-700.css";
+import "@fontsource/playfair-display/latin-400.css";
+import "@fontsource/playfair-display/latin-500.css";
+import "@fontsource/playfair-display/latin-600.css";
+import "@fontsource/playfair-display/latin-700.css";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-playfair",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thegoldingagency.com"),
@@ -143,7 +139,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}
+        className="font-sans antialiased"
       >
         <Header />
         <main>{children}</main>
