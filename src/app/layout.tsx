@@ -1,3 +1,4 @@
+import WelcomeOfferPopup from "@/components/WelcomeOfferPopup";
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
@@ -147,6 +148,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <WelcomeOfferPopup />
       </body>
     </html>
   );
